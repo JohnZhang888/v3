@@ -7,11 +7,15 @@ function ci(className, innerHTML) {
 }
 
 function toChinese() {
-  ci('.-language-button', 'To English&#12288;&#32;')
+  document.querySelector('html').lang = 'zh-CN'
+  ci('.-john-zhang', '张永康')
+  ci('.-example-title', '示例标题')
+  ci('.-example-description', '示例描述。')
+  ci('.-language-button', 'To English')
   ci('.-auto', '<i class="bi bi-circle-half"></i>&ensp;自动')
   ci('.-light', '<i class="bi bi-sun-fill"></i>&ensp;浅色')
   ci('.-dark', '<i class="bi bi-moon-stars-fill"></i>&ensp;深色')
-  ci('.-essay-title', '随写随记')
+  ci('.-essays-title', '随写随记')
   ci('.-composition-title', '正经文摘')
   ci('.-tag-title', '工具与游戏')
   ci('.-about-title', '关于')
@@ -25,14 +29,24 @@ function toChinese() {
   ci('.-rebuild-description', '记录我重新搭建网站的过程。')
   ci('.-xyes-title', 'XYes')
   ci('.-xyes-description', '一个二元一次方程组求解器。')
+  ci('.-composition-description', '我在考试或作业中写的正经文章，可作为初中作文参考。')
+  ci('.-country', '家国情怀')
+  ci('.-landscape', '优美景致')
+  ci('.-love', '日常温情')
+  ci('.-growth', '励志成长')
+  otherChineseText()
 }
 
 function toEnglish() {
-  ci('.-language-button', '转为中文&#12288;&#32;')
+  document.querySelector('html').lang = 'en-US'
+  ci('.-john-zhang', 'John Zhang')
+  ci('.-example-title', 'Example Title')
+  ci('.-example-description', 'Example description.')
+  ci('.-language-button', '转为中文')
   ci('.-auto', '<i class="bi bi-circle-half"></i>&ensp;Auto')
   ci('.-light', '<i class="bi bi-sun-fill"></i>&ensp;Light')
   ci('.-dark', '<i class="bi bi-moon-stars-fill"></i>&ensp;Dark')
-  ci('.-essay-title', 'Essays')
+  ci('.-essays-title', 'Essays')
   ci('.-composition-title', 'Compositions')
   ci('.-tag-title', 'Tools & Games')
   ci('.-about-title', 'About')
@@ -46,6 +60,12 @@ function toEnglish() {
   ci('.-rebuild-description', 'Record the process of rebuilding the website.')
   ci('.-xyes-title', 'XYes')
   ci('.-xyes-description', 'A solver of systems of linear equations of two unknowns.')
+  ci('.-composition-description', 'The essays that I wrote in exams or homework, which are avalible to be the refrence of junior high school passages.')
+  ci('.-country', 'Native Land Emotion')
+  ci('.-landscape', 'Amazing Landscape')
+  ci('.-love', 'Daily Love')
+  ci('.-growth', 'Growth Encouragement')
+  otherEnglishText()
 }
 
 switch (Cookies.get('language')) {
@@ -53,11 +73,11 @@ switch (Cookies.get('language')) {
     toChinese()
     break
   case 'en_us':
-    toEnglish() 
+    toEnglish()
     break
   default:
     Cookies.set('language', 'zh_cn')
-    toChinese()  
+    toChinese()
     break
 }
 

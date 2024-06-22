@@ -10,61 +10,13 @@
   <!--不要忘记更换这里的路径！-->
   <link href="styles/main.css" rel="stylesheet">
   <link href="styles/bootstrap-icons.min.css" rel="stylesheet">
-  <title>John Zhang 的网站</title>
+  <title></title>
   <link rel="shortcut icon" type="image/x-icon" href="../logo/shortcut.png">
   <link rel="prefetch" href="https://pic.imgdb.cn/item/66373a8e0ea9cb1403ac65ec.jpg">
 </head>
 
 <body>
-
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container">
-      <a href="index.html"><img src="https://img.qovv.cn/2024/05/19/6649d176b7df4.jpg" id="logo"
-          class="navbar-brand"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link text-body -essay-title" aria-current="page" href="#">随写随记</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-body -composition-title" href="#">正经文摘</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-body -tag-title" href="#">工具与游戏</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-body -about-title" href="#">关于</a>
-          </li>
-        </ul>
-        <form class="d-flex" style="list-style-type: none">
-          <li class="nav-item">
-            <a class="nav-link text-body -language-button" onclick="changeLanguage()" href="#">To English&#12288;&#32;</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="themeDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="themeDropdown">
-              <li><a id="autoDropdown" class="dropdown-item -auto" onclick="autoTheme()"><i
-                    class="bi bi-circle-half"></i>&ensp;自动</a></li>
-              <li><a id="lightDropdown" class="dropdown-item -light" href="#" onclick="lightTheme()"><i
-                    class="bi bi-sun-fill"></i>&ensp;浅色</a></li>
-              <li><a id="darkDropdown" class="dropdown-item -dark" href="#" onclick="darkTheme()"><i
-                    class="bi bi-moon-stars-fill"></i>&ensp;深色</a></li>
-            </ul>
-          </li>
-
-        </form>
-      </div>
-    </div>
-  </nav>
-
-
+  <div id="Navbar"></div>
 
   <div id="carousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -130,9 +82,10 @@
             </div>
           </div>
           <div class="col-8">
-            <h3 class="-essay-title">随写随记</h3>
+            <h3 class="-essays-title">随写随记</h3>
             <ul>
-              <li><a href="kind1/rebuildWebsite.html" class="link -rebuild-title" onmouseenter="MouseOnRebuild">网站重建记</a></li>
+              <li><a href="kind1/rebuildWebsite.html" class="link -rebuild-title"
+                  onmouseenter="MouseOnRebuild">网站重建记</a></li>
             </ul>
           </div>
         </div>
@@ -159,7 +112,7 @@
             </div>
           </div>
           <div class="col-8">
-            <h3 class="-composition-title">正经文摘</h3>
+            <a class="index-kind-title text-body" href="compositions.html"><h3 class="-composition-title">正经文摘</h3></a>
             <ul>
               <li><a href="kind2/voice.html" class="link -voice-title" onmouseenter="MouseOnVoice()">天赐之声</a></li>
               <li><a href="kind2/star.html" class="link -star-title" onmouseenter="MouseOnStar()">照我前行的一颗星</a></li>
@@ -184,7 +137,8 @@
           <div class="col-8">
             <h3 class="-tag-title">工具与游戏</h3>
             <ul>
-              <li><a href="tools-and-games/XYes.html" class="link -syes-title" onmouseenter="MouseOnRebuild">XYes</a></li>
+              <li><a href="tools-and-games/XYes.html" class="link -syes-title" onmouseenter="MouseOnRebuild">XYes</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -196,9 +150,18 @@
   <!--不要忘记更换这里的路径！-->
   <script src="scripts/bootstrap.bundle.min.js"></script>
   <script src="scripts/js.cookie.min.js"></script>
-  <script src="scripts/theme.js"></script>
   <script src="scripts/jquery-3.7.1.min.js"></script>
+  <script src="scripts/components.js"></script>
+  <script>
+    function otherChineseText() {
+      ci('title', 'John Zhang 的网站')
+    }
+    function otherEnglishText() {
+      ci('title', 'John Zhang\'s Website')
+    }
+  </script>
   <script src="scripts/language.js"></script>
+  <script src="scripts/theme.js"></script>
   <script>
     function MouseOnVoice() {
       $('#kind2-img').carousel(0)

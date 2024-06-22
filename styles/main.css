@@ -180,3 +180,10 @@
 #logo {
   height: 36px;
 }
+
+.index-kind-title {
+  text-decoration: none;
+}
+.index-kind-title:hover {
+  text-decoration: underline;
+}

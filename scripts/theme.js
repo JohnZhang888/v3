@@ -2,7 +2,6 @@ const mediaQueryListDark = window.matchMedia('(prefers-color-scheme: dark)') //�
 const themeDropdown = document.querySelector('#themeDropdown')
 const logo = document.querySelector('#logo')
 const html = document.querySelector('html')
-const themeCSS = document.querySelector('#themeCSS')
 const lightDropdown = document.querySelector('#lightDropdown')
 const darkDropdown = document.querySelector('#darkDropdown')
 const autoDropdown = document.querySelector('#autoDropdown')
@@ -17,11 +16,11 @@ function changeClass(a, b, c) {
 
 function lightStyle() {
   html.setAttribute('data-bs-theme', 'light')
-  logo.src = 'https://img.qovv.cn/2024/05/19/6649d28a8af9d.png'
+  logo.src = 'https://pic.imgdb.cn/item/666d0599d9c307b7e948a4ca.png'
 } //亮色样式
 function darkStyle() {
   html.setAttribute('data-bs-theme', 'dark')
-  logo.src = 'https://img.qovv.cn/2024/05/19/6649d1a0398d2.png'
+  logo.src = 'https://pic.imgdb.cn/item/6676d964d9c307b7e9048a8c.png'
 } //暗色样式
 
 function lightTheme() {
