@@ -12,7 +12,7 @@ document.querySelector('#Navbar').innerHTML = `<nav class="navbar navbar-expand-
         <a class="nav-link text-body -essays-title" aria-current="page" href="#"></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-body -composition-title" href="#"></a>
+        <a class="nav-link text-body -composition-title" href="compositions.html"></a>
       </li>
       <li class="nav-item">
         <a class="nav-link text-body -tag-title" href="#"></a>

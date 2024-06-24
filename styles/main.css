@@ -37,6 +37,10 @@
   color: var(--emerald-400);
 }
 
+.body-link {
+  color: var(--bs-body-color);
+}
+
 [data-bs-theme=dark] {
   :root {
     --bs-link-color: var(--emerald-400);
@@ -96,6 +100,13 @@
   .dropdown-item {
     --bs-dropdown-link-active-bg: var(--emerald-300) !important;
     --bs-dropdown-link-active-color: #000 !important;
+  }
+
+  .body-link:hover {
+    color: var(--emerald-400);
+  }
+  .body-link:active {
+    color: var(--emerald-500);
   }
 }
 
@@ -158,6 +169,14 @@
     --bs-dropdown-link-active-bg: var(--emerald-500) !important;
     --bs-dropdown-link-active-color: #fff !important;
   }
+
+  
+  .body-link:hover {
+    color: var(--emerald-500);
+  }
+  .body-link:active {
+    color: var(--emerald-600);
+  }
 }
 
 .main-text {
@@ -172,8 +191,8 @@
 }
 
 .small-img {
-  height: 128px;
   width: 100%;
+  aspect-ratio: 3/2;
   object-fit: cover;
 }
 

@@ -1,3 +1,5 @@
+const copyButton = document.querySelector('.copy-button')
+
 function ci(className, innerHTML) {
   const classToChange = document.querySelectorAll(className)
   for (let i = 0; i < classToChange.length; i++) {
@@ -34,6 +36,13 @@ function toChinese() {
   ci('.-landscape', '优美景致')
   ci('.-love', '日常温情')
   ci('.-growth', '励志成长')
+  ci('.-recommend', '推荐阅读')
+  ci('.-share', '分享')
+  ci('.-send', '向作者发送信息')
+  ci('.-spy-title', '谁是卧底')
+  ci('.-recommend-to-try', '推荐使用')
+  $('.No-english').hide();
+  
   otherChineseText()
 }
 
@@ -65,6 +74,13 @@ function toEnglish() {
   ci('.-landscape', 'Amazing Landscape')
   ci('.-love', 'Daily Love')
   ci('.-growth', 'Growth Encouragement')
+  ci('.-recommend', 'Recommend to Read')
+  ci('.-share', 'Share');
+  ci('.-send', 'Send a Message to the Author')
+  ci('.-spy-title', 'Who\'s the Spy')
+  ci('.-recommend-to-try', 'Recommend to Try')
+  $('.No-english').show();
+  
   otherEnglishText()
 }
 
