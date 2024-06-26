@@ -41,6 +41,7 @@ function toChinese() {
   ci('.-send', '向作者发送信息')
   ci('.-spy-title', '谁是卧底')
   ci('.-recommend-to-try', '推荐使用')
+  ci('.-download', '下载')
   $('.No-english').hide();
   
   otherChineseText()
@@ -79,6 +80,7 @@ function toEnglish() {
   ci('.-send', 'Send a Message to the Author')
   ci('.-spy-title', 'Who\'s the Spy')
   ci('.-recommend-to-try', 'Recommend to Try')
+  ci('.-download', 'Download')
   $('.No-english').show();
   
   otherEnglishText()

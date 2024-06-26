@@ -206,3 +206,9 @@
 .index-kind-title:hover {
   text-decoration: underline;
 }
+
+@import url('https://fonts.font.im/css?family=Noto+Sans');
+
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
